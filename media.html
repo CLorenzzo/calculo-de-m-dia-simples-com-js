@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de média</title>
+    <style>
+        body{
+            background-color:grey;
+            color: white;
+            font: normal 25pt Arial    ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcule sua média</h1>
+    <script>
+        var nome_do_aluno = String(prompt("Qual o nome do aluno?"))
+        var média_mínima = Number.parseFloat(prompt("Qual a média mínima da unidade?"))
+        var nota1 = Number(prompt("Qual a primeira nota?"))
+        var nota2 = Number(prompt("Qual a segunda nota?"))
+        var nota3 = Number(prompt("Qual a terceira nota?"))
+        var nota4 = Number(prompt("Qual a quarta e última nota"))
+        var média_final = (nota1 + nota2 + nota3 + nota4) / 4
+        document.write(média_final > média_mínima ? `O aluno ${nome_do_aluno} foi aprovado com média igual a ${média_final.toFixed(1).replace('.',',')}.` : `O aluno ${nome_do_aluno} foi reprovado com média igual a ${média_final.toFixed(1).replace('.',',')}.`)
+    </script>
+</body>
+</html>
